@@ -28,6 +28,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci
+      - run: npx playwright install
       - uses: nrwl/nx-set-shas@v4
 
       - run: npx nx-cloud record -- nx format:check
